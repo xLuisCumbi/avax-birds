@@ -316,6 +316,26 @@ function addScore(stage) {
             stage.pig.body.position.x = -100;
             score += 2;
             stage.updateScore(score);
+        } else if (stage.pig1.body.position.x < 700) {
+            stage.pig1.body.position.x = -100;
+            score += 2;
+            stage.updateScore(score);
+        } else if (stage.pig2.body.position.x < 700) {
+            stage.pig2.body.position.x = -100;
+            score += 2;
+            stage.updateScore(score);
+        } else if (stage.pig3.body.position.x < 700) {
+            stage.pig3.body.position.x = -100;
+            score += 2;
+            stage.updateScore(score);
+        } else if (stage.pig4.body.position.x < 700) {
+            stage.pig4.body.position.x = -100;
+            score += 2;
+            stage.updateScore(score);
+        } else if (stage.pig5.body.position.x < 700) {
+            stage.pig5.body.position.x = -100;
+            score += 2;
+            stage.updateScore(score);
         }
     }
 }
