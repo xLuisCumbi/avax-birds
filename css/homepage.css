@@ -138,3 +138,52 @@ h1 {
     height: 20px;
     fill: currentColor;
 }
+
+/* Add media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: 1fr; /* Change to single column */
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .game-card {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+
+    .games-container {
+        padding: 1rem;
+    }
+
+    /* Adjust footer for mobile */
+    .social-footer {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* Adjust UVT logo size for mobile */
+    .uvt-logo {
+        width: 80px;
+    }
+}
+
+/* Add an additional breakpoint for very small devices */
+@media screen and (max-width: 480px) {
+    .game-image {
+        height: 150px; /* Smaller images on very small devices */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
