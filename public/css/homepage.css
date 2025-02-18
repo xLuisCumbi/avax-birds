@@ -42,6 +42,7 @@ h1 {
 
 .game-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .game-image {
@@ -186,4 +187,15 @@ h1 {
     h1 {
         font-size: 1.8rem;
     }
+}
+
+.coming-soon {
+    cursor: default;
+    opacity: 0.7;
+    filter: grayscale(50%);
+}
+
+.coming-soon:hover {
+    transform: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
