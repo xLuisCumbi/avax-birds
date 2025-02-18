@@ -6,7 +6,7 @@ frontend:
         - npm install
     build:
       commands:
-        - npm run dev
+        - npm run build
   artifacts:
     baseDirectory: /dist
     files:
@@ -14,3 +14,5 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+  environment:
+    NODE_ENV: production
