@@ -1,5 +1,5 @@
 body {
-  background: url('./images/background.jpg');
+  background: url('/games/crush/images/background.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -44,7 +44,7 @@ body {
 }
 
 #button {
-	background-image: url('./images/button.png');
+	background-image: url('/games/crush/images/button.png');
 	height: 60px;
 	width: 110px;
 	cursor: pointer;
@@ -107,7 +107,11 @@ body {
 #candy {
 	height: 40px;
 	width: 40px;
-	background-size: 100%;
+	background-image: url('/games/crush/images/avax.png');
+}
+
+#candies-p {
+	background-image: url('/games/crush/images/avax.png');
 }
 
 

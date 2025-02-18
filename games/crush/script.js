@@ -1,14 +1,16 @@
+import { levels } from './levels.js'
+
 const width = 8
 
 const squares = []
 
 const colors = [
-    'url(./images/blub.png)',
-    'url(./images/ket.png)',
-    'url(./images/big.png)',
-    'url(./images/coq.png)',
-    'url(./images/wink.png)',
-    'url(./images/albert.png)'
+    'url(/games/crush/images/blub.png)',
+    'url(/games/crush/images/ket.png)',
+    'url(/games/crush/images/big.png)',
+    'url(/games/crush/images/coq.png)',
+    'url(/games/crush/images/wink.png)',
+    'url(/games/crush/images/albert.png)'
 ]
 
 let scoreBoard = document.getElementById('score')
@@ -23,6 +25,7 @@ let candiesInfo = document.getElementById('candies')
 let currentLevel = 0
 let movesAvailable = 0
 let candiesLeft = 0
+let levelConfiguration = null
 
 let playButton = document.getElementById('button')
 playButton.addEventListener('click', play)
@@ -79,7 +82,7 @@ function removeEventListeners() {
 }
 
 function dragStart() {
-    var audio = new Audio('./sound-effects/pickup.mp3');
+    var audio = new Audio('/games/crush/sound-effects/pickup.mp3');
     audio.play();
     draggedCandy = this.style.backgroundImage
     draggedSquare = parseInt(this.id)
@@ -110,17 +113,17 @@ function dragEnd() {
     } else if (replacedSquare && draggedSquare && validMove() == false) {
         squares[draggedSquare].style.backgroundImage = draggedCandy
         squares[replacedSquare].style.backgroundImage = replacedCandy
-        var audio = new Audio('./sound-effects/drop.mp3')
+        var audio = new Audio('/games/crush/sound-effects/drop.mp3')
         audio.play()
     } else {
         squares[draggedSquare].style.backgroundImage = draggedCandy
-        var audio = new Audio('./sound-effects/drop.mp3')
+        var audio = new Audio('/games/crush/sound-effects/drop.mp3')
         audio.play();
     }
 }
 
 function popBomb() {
-    var audio = new Audio('./sound-effects/bomb-pop.mp3')
+    var audio = new Audio('/games/crush/sound-effects/bomb-pop.mp3')
     audio.play()
     movesAvailable--
     movesInfo.innerText = movesAvailable
@@ -135,7 +138,7 @@ function popBomb() {
 }
 
 function popDynamite() {
-    var audio = new Audio('./sound-effects/dynamite-pop.mp3')
+    var audio = new Audio('/games/crush/sound-effects/dynamite-pop.mp3')
     audio.play()
     movesAvailable--
     movesInfo.innerText = movesAvailable
@@ -208,7 +211,7 @@ function setLevel() {
 
 function levelUp() {
     candiesLeft = 0
-    var audio = new Audio('./sound-effects/level-up.mp3');
+    var audio = new Audio('/games/crush/sound-effects/level-up.mp3');
     audio.play();
     currentLevel + 1 < levels.length ? currentLevel += 1 : currentLevel = 0
     setLevel()
@@ -239,7 +242,7 @@ function matchRowOfThree() {
                 sequence.forEach(index => {
                     squares[index].style.backgroundImage = ''
                 })
-                var audio = new Audio('./sound-effects/match1.mp3');
+                var audio = new Audio('/games/crush/sound-effects/match1.mp3');
                 audio.play();
             }
         }
@@ -262,13 +265,13 @@ function matchRowOfFour() {
                 sequence.forEach(index => {
                     if (index == i) {
                         squares[index].style.backgroundImage = "url(./images/bomb.png)"
-                        var audio = new Audio('./sound-effects/bomb-created.mp3');
+                        var audio = new Audio('/games/crush/sound-effects/bomb-created.mp3');
                         audio.play();
                     } else {
                         squares[index].style.backgroundImage = ''
                     }
                 })
-                var audio = new Audio('./sound-effects/match2.mp3');
+                var audio = new Audio('/games/crush/sound-effects/match2.mp3');
                 audio.play();
             }
         }
@@ -290,7 +293,7 @@ function matchColumnOfThree() {
             sequence.forEach(index => {
                 squares[index].style.backgroundImage = ''
             })
-            var audio = new Audio('./sound-effects/match1.mp3');
+            var audio = new Audio('/games/crush/sound-effects/match1.mp3');
             audio.play();
         }
     }
@@ -311,13 +314,13 @@ function matchColumnOfFour() {
             sequence.forEach(index => {
                 if (index == i) {
                     squares[index].style.backgroundImage = "url(./images/bomb.png)"
-                    var audio = new Audio('./sound-effects/bomb-created.mp3');
+                    var audio = new Audio('/games/crush/sound-effects/bomb-created.mp3');
                     audio.play();
                 } else {
                     squares[index].style.backgroundImage = ''
                 }
             })
-            var audio = new Audio('./sound-effects/match2.mp3');
+            var audio = new Audio('/games/crush/sound-effects/match2.mp3');
             audio.play();
         }
     }
@@ -340,13 +343,13 @@ function matchSquareOfFour() {
                 sequence.forEach(index => {
                     if (index == i) {
                         squares[index].style.backgroundImage = "url(./images/dynamite.png)"
-                        var audio = new Audio('./sound-effects/bomb-created.mp3');
+                        var audio = new Audio('/games/crush/sound-effects/bomb-created.mp3');
                         audio.play();
                     } else {
                         squares[index].style.backgroundImage = ''
                     }
                 })
-                var audio = new Audio('./sound-effects/match2.mp3');
+                var audio = new Audio('/games/crush/sound-effects/match2.mp3');
                 audio.play();
             }
         }
@@ -387,7 +390,7 @@ function clearScoreBoard() {
 
 function checkGameOver() {
     if (movesAvailable == 0) {
-        var audio = new Audio('./sound-effects/game-over.mp3');
+        var audio = new Audio('/games/crush/sound-effects/game-over.mp3');
         audio.play();
         clearInterval(intervalID)
         clearScoreBoard()
@@ -396,7 +399,7 @@ function checkGameOver() {
 }
 
 function play() {
-    var audio = new Audio('./sound-effects/start.mp3');
+    var audio = new Audio('/games/crush/sound-effects/start.mp3');
     audio.play();
     currentLevel = 0
     setLevel()
@@ -411,4 +414,11 @@ function play() {
         checkGameOver()
     }, 100
     )
+}
+
+function createCandy() {
+    const candy = document.createElement('div')
+    candy.style.backgroundImage =
+        `url('/games/crush/images/${randomCandy()}.png')`
+    return candy
 }
