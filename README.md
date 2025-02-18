@@ -48,14 +48,14 @@ The game series focuses on a flock of birds who try to save their eggs from gree
 ### Birds
 |                    Red                     |              Chuck               |              Bomb               |              Hal               |
 | :----------------------------------------: | :------------------------------: | :-----------------------------: | :----------------------------: |
-| <img src="data/birds/red.png" width="70%"> | <img src="data/birds/chuck.png"> | <img src="data/birds/bomb.png"> | <img src="data/birds/hal.png"> |
+| <img src="data/birds/blub.png" width="70%"> | <img src="data/birds/splenium.png"> | <img src="data/birds/ket.png"> | <img src="data/birds/wink.png"> |
 |                    Cute                    |             Speed Up             |           Bigger Size           |           Boomerang            |
 
 ### Pigs
 
 |                      Minion                      |                      Corporal                      |                King                |
 | :----------------------------------------------: | :------------------------------------------------: | :--------------------------------: |
-| <img src="data/pigs/minion-pig.png" width="50%"> | <img src="data/pigs/corporal-pig.png" width="70%"> | <img src="data/pigs/king-pig.png"> |
+| <img src="data/pigs/big.png" width="50%"> | <img src="data/pigs/avax.png" width="70%"> | <img src="data/pigs/coq.png"> |
 |                The Smallest Size                 |                    Medium Size                     |          The Biggest Size          |
 
 ## Game Mechanics and Interfaces
@@ -76,7 +76,7 @@ The game series focuses on a flock of birds who try to save their eggs from gree
 
 - ### Stage Screen
   <img src="readme-img/stage.png" width="80%" height="80%">
-  
+
   - A slingshot and a bird are on the left side of the stage screen.
   - User can fire the bird by dragging slingshot back.
   - User must adjust the angle to get the pig out of the screen.
@@ -132,7 +132,7 @@ This is UML of my implementation.
     - Transmit remaining birds and scores to the ScoreDisplay class.
   - `firing()`
     - When the bird is fired, place the new bird on the slingshot.
-  
+
 - Functions in bird classes
   - `ability()`
     - Activate the ability of a bird
@@ -165,7 +165,7 @@ This is UML of my implementation.
 - Scores were exchanged between score display and stage
 - Make the code more simple.
 - Different parts of code speak to each other.
-  
+
 ### Factory Design Pattern
 - Each stage was constructed using the factory design pattern.
 - When the stage was restarted, implementation through the factory design pattern was able to make the code more concise.
@@ -192,7 +192,7 @@ Make slingshot look more like real Angry Birds'!
   - --> Therefore, solved by making the actual body size smaller and only the size of the render image larger.
 - Make left and right elastic band of slinghot by Constraint method of Matter.js
   - In addition, adjust color and thickness of the elastic band look more like real Angry Birds'.
-  
+
     ```js
     // Elastic class
     class Elastic extends Body {

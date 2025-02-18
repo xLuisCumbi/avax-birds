@@ -10,7 +10,9 @@ class Elastic extends Body {
                 y: y
             },
             bodyB: this.bird,
-            stiffness: 0.05,
+            stiffness: 0.03,
+            damping: 0.01,
+            length: 0,
             render: {
                 type: "line",
                 strokeStyle: '#120E0A',
