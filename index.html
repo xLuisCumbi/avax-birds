@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Avax Games</title>
     <link rel="icon" type="image/jpg" href="/data/birds/blub.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/homepage.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PENVTLR0VC"></script>
@@ -16,191 +17,162 @@
     </script>
 </head>
 
-<body>
+<body class="min-h-screen flex justify-center items-center bg-gradient-to-br from-purple-600 to-purple-900 font-['angry-birds']">
     <!-- Add UVT logo -->
     <a href="https://x.com/ultravioletadao" target="_blank" class="uvt-logo">
         <img src="data/img/uvt.png" alt="UVT">
     </a>
 
-    <div class="games-container">
-        <h1>Avax Games</h1>
-        <div class="project-info">
-            <h3>About Avax Games</h3>
-            <p>A collection of fun and engaging games built by the community for the Avalanche ecosystem.
-                Join us in creating and playing games that showcase the creativity of our developers!</p>
-            <div class="creators-info">
-                <p>Platform Created with 💜 by:</p>
-                <div class="creator-tags">
-                    <a href="https://x.com/xluiscumbi" target="_blank">@xluiscumbi</a>
-                    <a href="https://x.com/RoypiTw3" target="_blank">@RoypiTw3</a>
-                    <a href="https://x.com/fredinoo" target="_blank">@fredinoo</a>
+    <div class="games-container px-4 py-8">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-8 drop-shadow-lg">Avax Games</h1>
+
+        <div class="mobile-announcement md:hidden flex items-center justify-center gap-2 bg-neutral-800 text-white px-6 py-4 rounded-xl mb-8 mx-auto max-w-md text-lg">
+            💻 Desktop version only - Mobile coming soon
+        </div>
+
+        <div class="project-info bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-4xl mx-auto">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">About Avax Games</h3>
+            <p class="text-gray-200 leading-relaxed text-lg md:text-xl">
+                A collection of fun and engaging games built by the community for the Avalanche ecosystem.
+                Join us in creating and playing games that showcase the creativity of our developers!
+            </p>
+
+            <div class="creators-info mt-6 pt-6 border-t border-white/20">
+                <p class="text-white mb-3 text-lg md:text-xl">Platform Created with 💜 by:</p>
+                <div class="creator-tags flex flex-wrap gap-3 justify-center">
+                    <a href="https://x.com/xluiscumbi" target="_blank" class="px-5 py-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all text-lg">
+                        @xluiscumbi
+                    </a>
+                    <a href="https://x.com/RoypiTw3" target="_blank" class="px-5 py-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all text-lg">
+                        @RoypiTw3
+                    </a>
+                    <a href="https://x.com/fredinoo" target="_blank" class="px-5 py-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all text-lg">
+                        @fredinoo
+                    </a>
                 </div>
             </div>
             <div class="contributors-info">
-                <p>Featured Game Creators:</p>
+                <p class="text-white mb-3 text-lg md:text-xl">Featured Game Creators:</p>
                 <div class="creator-tags">
-                    <a href="https://x.com/0xJokker" target="_blank">@0xJokker</a>
-                    <a href="https://x.com/inigozepeda" target="_blank">@inigozepeda</a>
+                    <a href="https://x.com/0xJokker" target="_blank" class="px-5 py-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all text-lg">@0xJokker</a>
+                    <a href="https://x.com/inigozepeda" target="_blank" class="px-5 py-3 bg-white/20 rounded-full text-white hover:bg-white/30 transition-all text-lg">@inigozepeda</a>
                 </div>
             </div>
         </div>
-        <div class="mobile-announcement">
-            Desktop version only - Mobile version coming soon
-        </div>
-        <div class="games-grid">
+
+        <div class="games-grid grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             <!-- Avax Birds Card -->
-            <div class="game-card">
-                <a href="birds.html">
-                    <div class="game-image">
-                        <img src="data/img/avax-birds.png" alt="Avax Birds">
+            <div class="game-card bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow">
+                <a href="birds.html" class="block">
+                    <div class="game-image aspect-video rounded-xl overflow-hidden">
+                        <img src="data/img/avax-birds.png" alt="Avax Birds" class="w-full h-full object-cover">
                     </div>
-                    <div class="game-info">
-                        <h2>Avax Birds</h2>
-                        <p>A physics-based meme-bird launching game</p>
+                    <div class="game-info mt-4">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Avax Birds</h2>
+                        <p class="text-gray-600 mt-2 text-lg md:text-xl">A physics-based meme-bird launching game</p>
+                        <div class="creator-link mt-4 pt-4 border-t border-gray-100">
+                            <span class="text-base md:text-lg text-gray-500">Game by:</span>
+                            <a href="https://x.com/xluiscumbi" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors text-base md:text-lg">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
+                                    <g>
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                @xluiscumbi
+                            </a>
+                        </div>
                     </div>
                 </a>
-                <div class="creator-link">
-                    <span>Game made by:</span>
-                    <a href="https://x.com/xluiscumbi" target="_blank">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
-                            <g>
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                                </path>
-                            </g>
-                        </svg>
-                        @xluiscumbi
-                    </a>
-                    <a href="https://x.com/RoypiTw3" target="_blank">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
-                            <g>
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                                </path>
-                            </g>
-                        </svg>
-                        @RoypiTw3
-                    </a>
-                    <a href="https://x.com/0xJokker" target="_blank">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
-                            <g>
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                                </path>
-                            </g>
-                        </svg>
-                        @fredinoo
-                    </a>
-                </div>
             </div>
 
             <!-- Avax Crush Card -->
-            <div class="game-card">
-                <a href="games/crush/index.html">
-                    <div class="game-image">
-                        <img src="games/crush/images/avax-crush.png" alt="Avax Crush">
+            <div class="game-card bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow">
+                <a href="games/crush/index.html" class="block">
+                    <div class="game-image aspect-video rounded-xl overflow-hidden">
+                        <img src="games/crush/images/avax-crush.png" alt="Avax Crush" class="w-full h-full object-cover">
                     </div>
-                    <div class="game-info">
-                        <h2>Avax Crush</h2>
-                        <p>Match puzzle game with avax-memes</p>
+                    <div class="game-info mt-4">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Avax Crush</h2>
+                        <p class="text-gray-600 mt-2 text-lg md:text-xl">Match puzzle game with avax-memes</p>
+                        <div class="creator-link mt-4 pt-4 border-t border-gray-100">
+                            <span class="text-base md:text-lg text-gray-500">Game by:</span>
+                            <a href="https://x.com/xluiscumbi" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors text-base md:text-lg">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
+                                    <g>
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                @xluiscumbi
+                            </a>
+                        </div>
                     </div>
                 </a>
-
-                <div class="creator-link">
-                    <span>Game made by:</span>
-                    <a href="https://x.com/xluiscumbi" target="_blank">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
-                            <g>
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                                </path>
-                            </g>
-                        </svg>
-                        @xluiscumbi
-                    </a>
-                    <a href="https://x.com/RoypiTw3" target="_blank">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
-                            <g>
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                                </path>
-                            </g>
-                        </svg>
-                        @RoypiTw3
-                    </a>
-                    <a href="https://x.com/0xJokker" target="_blank">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
-                            <g>
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                                </path>
-                            </g>
-                        </svg>
-                        @fredinoo
-                    </a>
-                </div>
             </div>
 
             <!-- Avax Puzzle Card -->
-            <div class="game-card">
-                <a href="https://avax-puzzle.pages.dev/" target="_blank">
-                    <div class="game-image">
-                        <img src="/games/puzzle/avax-puzzle.jpg" alt="Avax Puzzle">
+            <div class="game-card bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow">
+                <a href="https://avax-puzzle.pages.dev/" target="_blank" class="block">
+                    <div class="game-image aspect-video rounded-xl overflow-hidden">
+                        <img src="/games/puzzle/avax-puzzle.jpg" alt="Avax Puzzle" class="w-full h-full object-cover">
                     </div>
-                    <div class="game-info">
-                        <h2>Avax Puzzle</h2>
-                        <p>Slide puzzle game with avax-memes</p>
+                    <div class="game-info mt-4">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Avax Puzzle</h2>
+                        <p class="text-gray-600 mt-2 text-lg md:text-xl">Slide puzzle game with avax-memes</p>
+                        <div class="creator-link mt-4 pt-4 border-t border-gray-100">
+                            <span class="text-base md:text-lg text-gray-500">Game by:</span>
+                            <a href="https://x.com/0xJokker" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors text-base md:text-lg">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
+                                    <g>
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                @0xJokker
+                            </a>
+                        </div>
                     </div>
                 </a>
-                <div class="creator-link">
-                    <span>Game made by:</span>
-                    <a href="https://x.com/0xJokker" target="_blank">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
-                            <g>
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                                </path>
-                            </g>
-                        </svg>
-                        @0xJokker
-                    </a>
-                </div>
             </div>
 
             <!-- Blubnator Card -->
-            <div class="game-card">
-                <a href="https://inigozart.com/blub/" target="_blank">
-                    <div class="game-image">
-                        <img src="/games/blubnator/blubnator.jpg" alt="Blubnator">
+            <div class="game-card bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow">
+                <a href="https://inigozart.com/blub/" target="_blank" class="block">
+                    <div class="game-image aspect-video rounded-xl overflow-hidden">
+                        <img src="/games/blubnator/blubnator.jpg" alt="Blubnator" class="w-full h-full object-cover">
                     </div>
-                    <div class="game-info">
-                        <h2>Blubnator</h2>
-                        <p>🕹️ Blubnator Alien Attack Mini Game! Help protect the city against aliens!</p>
+                    <div class="game-info mt-4">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Blubnator</h2>
+                        <p class="text-gray-600 mt-2 text-lg md:text-xl">🕹️ Blubnator Alien Attack Mini Game! Help protect the city against aliens!</p>
+                        <div class="creator-link mt-4 pt-4 border-t border-gray-100">
+                            <span class="text-base md:text-lg text-gray-500">Game by:</span>
+                            <a href="https://x.com/inigozepeda" class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors text-base md:text-lg">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
+                                    <g>
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                @inigozepeda
+                            </a>
+                        </div>
                     </div>
                 </a>
-                <div class="creator-link">
-                    <span>Game made by:</span>
-                    <a href="https://x.com/inigozepeda" target="_blank">
-                        <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
-                            <g>
-                                <path
-                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                                </path>
-                            </g>
-                        </svg>
-                        @inigozepeda
-                    </a>
-                </div>
             </div>
 
             <!-- Coming Soon Card -->
-            <div class="game-card coming-soon">
-                <div class="game-image">
-                    <img src="data/img/uvt.png" alt="More Games Coming Soon">
+            <div class="game-card coming-soon bg-white/80 rounded-2xl p-4 shadow-lg">
+                <div class="game-image aspect-video rounded-xl overflow-hidden">
+                    <img src="data/img/uvt.png" alt="Coming Soon" class="w-full h-full object-contain">
                 </div>
-                <div class="game-info">
-                    <h2>More Games</h2>
-                    <p>Coming Soon!</p>
+                <div class="game-info mt-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-600">More Games</h2>
+                    <p class="text-gray-500 mt-2 text-lg md:text-xl">Coming Soon!</p>
                 </div>
             </div>
         </div>
@@ -210,7 +182,7 @@
     <footer class="social-footer">
         <span>Created by:</span>
         <div class="social-links">
-            <a href="https://x.com/xluiscumbi" target="_blank">
+            <a href="https://x.com/xluiscumbi" target="_blank" class="text-base md:text-lg">
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
                     <g>
                         <path
@@ -220,7 +192,7 @@
                 </svg>
                 @xluiscumbi
             </a>
-            <a href="https://x.com/RoypiTw3" target="_blank">
+            <a href="https://x.com/RoypiTw3" target="_blank" class="text-base md:text-lg">
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
                     <g>
                         <path
@@ -230,7 +202,7 @@
                 </svg>
                 @RoypiTw3
             </a>
-            <a href="https://x.com/fredinoo" target="_blank">
+            <a href="https://x.com/fredinoo" target="_blank" class="text-base md:text-lg">
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="x-icon">
                     <g>
                         <path

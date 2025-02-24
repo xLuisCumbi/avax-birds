@@ -1,12 +1,24 @@
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #8a2be2 0%, #6a0dad 100%);
-    font-family: 'angry-birds', Arial, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that can't be handled by Tailwind */
+@font-face {
+    font-family: 'angry-birds';
+    src: url('../data/font/angrybirds-regular.ttf') format('truetype');
+}
+
+/* Custom animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.x-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 .games-container {
@@ -106,11 +118,6 @@ h1 {
     white-space: nowrap;
 }
 
-@font-face {
-    font-family: 'angry-birds';
-    src: url('../data/font/angrybirds-regular.ttf') format('truetype');
-}
-
 /* Add UVT logo styles */
 .uvt-logo {
     position: fixed;
@@ -169,12 +176,6 @@ h1 {
 
 .social-links a:hover {
     opacity: 0.8;
-}
-
-.x-icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
 }
 
 /* Add media query for mobile devices */
